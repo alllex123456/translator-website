@@ -1,33 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  body {
+    @apply font-sans bg-light-95 text-dark-30;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-bold text-dark-15;
+  }
+
+  h1 {
+    @apply text-6xl;
+  }
+
+  h2 {
+    @apply text-7xl;
+  }
+
+  h3 {
+    @apply text-6xl;
+  }
+
+  h4 {
+    @apply text-5xl;
+  }
+
+  h5 {
+    @apply text-4xl;
+  }
+
+  h6 {
+    @apply text-3xl;
+  }
+
+  a {
+    @apply text-blue-200;
+  }
+
+  p {
+    @apply text-dark;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .paragraph-small {
+    @apply text-lg;
+  }
+  .paragraph-medium {
+    @apply text-xl;
+  }
+  .paragraph-large {
+    @apply text-2xl;
+  }
+  .radius {
+    @apply rounded-lg;
+  }
+  .width140 {
+    @apply max-w-[140rem] mx-auto;
+  }
+  .text-dark {
+    @apply text-dark-20;
+  }
+  .text-light {
+    @apply text-light-89;
   }
 }
