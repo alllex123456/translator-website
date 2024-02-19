@@ -1,5 +1,5 @@
-import React from 'react';
 import Section from '../general/Section';
+import SlideUp from '../Animations/SlideUp';
 
 const services = [
   {
@@ -24,10 +24,14 @@ const Services = () => {
     <Section>
       <div className="grid gap-10 grid-cols-3 md:grid-cols-1">
         {services.map((service, index) => (
-          <div key={index} className="border border-light-86 radius p-12">
+          <SlideUp
+            key={index}
+            custom={index}
+            className="border border-light-86 radius p-12"
+          >
             <h4 className="mb-6">{service.title}</h4>
             <p className="paragraph-large">{service.description}</p>
-          </div>
+          </SlideUp>
         ))}
       </div>
     </Section>

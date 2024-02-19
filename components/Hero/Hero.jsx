@@ -1,8 +1,11 @@
+import { motion } from 'framer-motion';
+import { WhatsappLogo } from '@phosphor-icons/react';
 import Image from 'next/image';
 import heroImage from '../../public/images/hero.webp';
 import Button from '../general/Button';
-import { WhatsappLogo } from '@phosphor-icons/react';
 import Section from '../general/Section';
+import FadeIn from '../Animations/FadeIn';
+import { staggeredVariant } from '@/framer-variants/framer-variants';
 
 const Hero = () => {
   const handleClickWhatsapp = () =>
@@ -11,7 +14,7 @@ const Hero = () => {
   return (
     <Section>
       <header className="relative grid gap-4 grid-cols-[2fr_4fr] min-h-[60vh] -my-[8rem] md:grid-cols-1">
-        <div className="relative radius overflow-hidden md:absolute md:w-[100%] md:h-[100%] md:opacity-5">
+        <FadeIn className="relative radius overflow-hidden md:absolute md:w-[100%] md:h-[100%] md:opacity-5">
           <Image
             src={heroImage}
             alt="building"
@@ -19,12 +22,39 @@ const Hero = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
             className="object-cover"
           />
-        </div>
+        </FadeIn>
 
-        <div className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center md:bg-transparent">
+        <FadeIn className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center md:bg-transparent">
           <div>
-            <p className="font-bold text-7xl">SENS TRANSPUS</p>
-            <h1>Traduceri profesionale de limba engleză</h1>
+            <p className="font-bold text-7xl">
+              {[
+                'S',
+                'E',
+                'N',
+                'S',
+                '\u00A0',
+                'T',
+                'R',
+                'A',
+                'N',
+                'S',
+                'P',
+                'U',
+                'S',
+              ].map((item, index) => (
+                <motion.span
+                  className="inline-block"
+                  key={index}
+                  variants={staggeredVariant}
+                  custom={index}
+                  initial="initial"
+                  animate="animate"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </p>
+            <h1>Traduceri autorizate de limba engleză</h1>
           </div>
           <div className="text-3xl flex flex-col gap-4">
             <p>
@@ -39,7 +69,7 @@ const Hero = () => {
           <Button onClick={handleClickWhatsapp}>
             Whatsapp <WhatsappLogo size={24} />
           </Button>
-        </div>
+        </FadeIn>
       </header>
     </Section>
   );

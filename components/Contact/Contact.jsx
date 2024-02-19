@@ -1,9 +1,9 @@
 import { useState } from 'react';
-
+import { Phone, Envelope } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Section from '../general/Section';
-import { Phone, Envelope } from '@phosphor-icons/react';
 import Button from '../general/Button';
+import FadeIn from '../Animations/FadeIn';
 
 const Contact = () => {
   const [success, setSuccess] = useState();
@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <Section>
-      <div className="grid gap-4 grid-cols-[2fr_4fr] min-h-[50vh] md:grid-cols-1">
+      <FadeIn className="grid gap-4 grid-cols-[2fr_4fr] min-h-[50vh] md:grid-cols-1">
         <div className="relative radius bg-dark-35 text-light-89 text-2xl p-10 flex flex-col gap-10">
           <p className="text-light">
             Dacă ești interesat de serviciile mele de traducere limba engleză
@@ -65,7 +65,7 @@ const Contact = () => {
         >
           <div className="flex flex-col">
             <label htmlFor="name" className="font-bold text-xl">
-              Numele tau
+              Numele tău
             </label>
             <input className="p-4 radius text-2xl" name="name" />
           </div>
@@ -77,7 +77,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="message" className="font-bold text-xl">
-              Mesajul tau
+              Mesajul tău
             </label>
             <textarea rows="5" className="p-4 radius text-2xl" name="message" />
           </div>
@@ -88,7 +88,7 @@ const Contact = () => {
             </p>
           </div>
         </form>
-      </div>
+      </FadeIn>
     </Section>
   );
 };

@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis';
+
 import Head from 'next/head';
 import Advantages from '@/components/Advantages/Advantages';
 import Collaborations from '@/components/Collaborations/Collaborations';
@@ -8,10 +11,21 @@ import Pricing from '@/components/Pricing/Pricing';
 import Services from '@/components/Services/Services';
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Sens Transpus | Traduceri limba engleză</title>
+        <title>Sens Transpus | Traduceri autorizate de limba engleză</title>
       </Head>
       <Hero />
       <main className="">

@@ -11,6 +11,8 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",
     "@sendgrid/mail": "^8.1.1",
+    "@studio-freight/lenis": "^1.0.35",
+    "framer-motion": "^11.0.5",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

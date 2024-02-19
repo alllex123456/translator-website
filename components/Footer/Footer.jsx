@@ -10,7 +10,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Sens Transpus. Design și
             implementare aparținând S.C. ARX Logicwave S.R.L.
           </p>
-          <Link href="https://arx-logicwave.ro">
+          <Link href="https://arx-logicwave.ro" target="_blank">
             Realizare website și aplicații web
           </Link>
         </div>
