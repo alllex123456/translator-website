@@ -13,18 +13,18 @@ const Hero = () => {
 
   return (
     <Section>
-      <header className="relative grid gap-4 grid-cols-[2fr_4fr] min-h-[60vh] -my-[8rem] md:grid-cols-1">
-        <FadeIn className="relative radius overflow-hidden md:absolute md:w-[100%] md:h-[100%] md:opacity-5">
+      <header className="relative grid gap-4 grid-cols-[2fr_4fr] min-h-[60vh] -my-[8rem] ||| md:grid-cols-1">
+        <FadeIn className="relative radius overflow-hidden ||| md:absolute md:w-[100%] md:h-[100%] md:opacity-5">
           <Image
             src={heroImage}
             alt="building"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-            className="object-cover"
+            className="object-cover ||| md:hidden"
           />
         </FadeIn>
 
-        <FadeIn className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center md:bg-transparent">
+        <FadeIn className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center">
           <div>
             <p className="font-bold text-7xl">
               {[

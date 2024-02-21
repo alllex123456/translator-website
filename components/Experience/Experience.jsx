@@ -28,7 +28,7 @@ const Collaborations = () => {
         </p>
       </div>
 
-      <div className="relative h-[300vh] w-[100%]">
+      <div className="relative h-[300vh] w-[100%] ||| md:hidden">
         <div className="sticky overflow-hidden top-0 w-[100%] h-[100vh]">
           <motion.div
             style={{ scale, transformOrigin: 'top' }}

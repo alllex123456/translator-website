@@ -11,17 +11,6 @@ import Pricing from '@/components/Pricing/Pricing';
 import Services from '@/components/Services/Services';
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <>
       <Head>
