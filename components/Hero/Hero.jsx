@@ -24,7 +24,7 @@ const Hero = () => {
           />
         </FadeIn>
 
-        <FadeIn className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center">
+        <FadeIn className="relative bg-light-89 px-20 radius flex gap-8 flex-col justify-center ||| md:px-10">
           <div>
             <p className="font-bold text-7xl">
               {[
