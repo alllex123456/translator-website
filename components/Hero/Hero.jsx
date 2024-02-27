@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <Section>
-      <header className="relative grid gap-4 grid-cols-[2fr_4fr] min-h-[60vh] -my-[8rem] ||| md:grid-cols-1">
+      <header className="relative grid gap-4 grid-cols-[2fr_4fr] min-h-[60vh] -my-[8rem] ||| md:grid-cols-1 md:py-0 md:mt-0">
         <FadeIn className="relative radius overflow-hidden ||| md:absolute md:w-[100%] md:h-[100%] md:opacity-5">
           <Image
             src={heroImage}

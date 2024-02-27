@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import Lenis from '@studio-freight/lenis';
-
 import Head from 'next/head';
 import Advantages from '@/components/Advantages/Advantages';
 import Collaborations from '@/components/Collaborations/Collaborations';
